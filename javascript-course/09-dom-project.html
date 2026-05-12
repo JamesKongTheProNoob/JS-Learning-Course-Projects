@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick=" 
+      subscribe();
+    " class="js-subscribe-button">
+    Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="//event listener
+      console.log('typing')
+      if (event.key==='Enter'){
+        calculateTotal()
+      }
+    ">
+    <button onclick="
+      calculateTotal()
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+      String(25)
+      console.log('25'-5)//always do math with numbers, not strings as dlimena like this will apear, this line converting it to number while the next converting it to string
+      console.log('25'+5)
+      window.document
+      window.console.log('window')//window is part of the browser
+      window.alert()//one doesn't need to type window
+      function calculateTotal(){
+        const inputElement=document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value)//in <input> there is no HTML(the text between the tags), so we use value instead
+        if(cost<40){
+          cost+=10;//any value got froma DOM is a string, so it must be converted into integers through the function Number()
+          document.querySelector('.js-total-cost').innerHTML=`$${cost}`;
+        }
+
+
+
+      }
+      function subscribe(){
+        const buttonElement=document.querySelector('.js-subscribe-button');
+        if(buttonElement.innerText==='Subscribe'){
+          buttonElement.innerText='Subscribed';//innerText just gets the text of the element, works the same as html here, but it allows us to change lines during our button definition below while innerHTML can't
+        }else{
+          buttonElement.innerText='Subscribe';
+        }
+      }
+    </script>
+  </body>
+</html>    

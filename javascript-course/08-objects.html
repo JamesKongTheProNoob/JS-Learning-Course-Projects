@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <script>
+      /*
+     const product={
+      name:'socks',
+      price: 1090
+     }
+     console.log(product);
+     console.log(product.name);
+     console.log(product.price);
+     product.name='cotton socks';
+     console.log(product);
+     product.newProperty=true;
+     console.log(product);
+     delete product.newProperty;
+     console.log(product);
+     */
+    /*
+      const product2={
+        name:'shirt',
+        'delivery-time':'1 day',
+        rating:{//nested object
+          stars:4.5,
+          count: 87
+        },
+        fun:function funcion1(){
+          console.log('function inside object')
+        }
+        
+      }
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);//ths technique is used when the name is unable to be referenced using the dot method,such as alpha-bet, where the dash is modified 
+      console.log(product2['delivery-time']);
+      product2.fun();
+      console.log(typeof console)
+
+      //console is actually also an object, and log here is a function built in the object itself, function inside of object=method
+      //Bulit in object: JavaScript Object,JSON Syntax, localStorage
+      //JSON: similar to JavaScript Syntax but with less features, but more universal
+      //We use JSON when we store data and send data between computers
+      //Bulit in JSON Object: Convert JavaScript Object->JSON
+      console.log(JSON.stringify(product2));//no functions displayed as they are not allowed in JSON
+      console.log(typeof(JSON.stringify(product2)));
+      const jsonString=JSON.stringify(product2)
+      console.log(JSON.parse(jsonString));//parse function converts json to javascript object 
+      //localStorage: stores values more permenantly: varaibles we write here are temperary, if we refresh/close the page, all the variables are deleted.*/
+      console.log('hello'.length);//strings also have properties
+      console.log('hello'.toUpperCase());//strings also have methods
+      //the above are autoboxed, meaning they are automatically boxed in an object without us seeing it
+      const object1={
+        message:'hello'
+      };//when we create objs, the actual value is created somewhere in the computer's memory, while the variable gets a reference that points to a location in the memory
+      const object2=object1;//doesn't make a copy of object1, but just adds another reference to the same memory location
+      object1.message = 'Good Job!';
+      console.log(object1);//this changes the memory the reference is poitning to, not the reference itself, so it doesn't violate the immutability of the const rule
+      console.log(object2);//as obj2 have the same reference, its contents are also changed as obj1 changed
+      const object3={
+        message:'Good Job!'
+      }
+      console.log(object3===object1)//returns false, this compared the references when it comes to variables containing objs, not the actual memory
+      console.log(object2 === object1)//has the same reference, so true
+      const object4={
+        message:'Good Job!',
+        price: 799
+      }
+      //const message=object4.message;
+      const {message, price}=object4;//shortcut for the above, named destructuring
+      console.log(message);
+      console.log(price);
+
+      const object5={
+        //message: message,
+        message,//shortcut for the above,named short hand property
+        /*method: function function1(){
+          console.log('method');
+        }*/
+        method(){
+          console.log('method');
+        }//shortcut for the above,shor thand method syntax
+      } 
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>    

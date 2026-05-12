@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <button onclick="
+      chose('heads')
+    ">heads</button>
+    <button onclick="
+      chose('tails')
+    ">tails</button>
+    <p></p>
+    <script>
+      function chose(button){
+        document.querySelector('p').innerHTML=`You chose: ${button}`
+      }
+    </script>
+  </body>
+</html>

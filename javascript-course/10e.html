@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      button{
+        background-color:lightgray;
+        color:black;
+        border-radius:5px;
+        padding:5px 10px;
+        border-color: transparent;
+        cursor:pointer;
+      }
+      .is-toggled{
+        background-color:black;
+        color:white;
+        cursor:pointer;
+      }
+    </style>
+  <body>
+    <button class="gaming" onclick="
+      document.querySelector('.gaming').classList.contains('is-toggled')?document.querySelector('.gaming').classList.remove('is-toggled'):document.querySelector('.gaming').classList.add('is-toggled')">Gaming</button>
+    <button class="music" onclick="
+      document.querySelector('.music').classList.contains('is-toggled')?document.querySelector('.music').classList.remove('is-toggled'):document.querySelector('.music').classList.add('is-toggled')">Music</button>
+    <button class="tech" onclick="
+      document.querySelector('.tech').classList.contains('is-toggled')?document.querySelector('.tech').classList.remove('is-toggled'):document.querySelector('.tech').classList.add('is-toggled')">Tech</button>
+    <script>
+
+    </script>
+  </body>
+</html>    

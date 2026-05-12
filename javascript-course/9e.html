@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <input placeholder="Name" onkeydown="
+      (event.key==='Enter')?submit(document.querySelector('input').value):null
+    ">
+    <button onclick="
+      submit(document.querySelector('input').value)
+    ">Submit</button>
+    <p></p>
+    <script>
+      function submit(input){
+        document.querySelector('p').innerHTML=`Your name is: ${input}`
+      }
+    </script>
+  </body>
+</html>

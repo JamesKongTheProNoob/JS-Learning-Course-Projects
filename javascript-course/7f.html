@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      function convertToCelsius(Fahrenheit){
+        const celsius=(Fahrenheit-32)*5/9
+        return celsius
+      }
+      function convertToFahrenheit(celsius){
+        const Fahrenheit=celsius*9/5+32
+        return Fahrenheit
+      }
+      function convertTemperature(num,type){
+        if(type==='F'){
+          console.log(convertToCelsius(num))
+        }else if(type==='C'){
+          console.log(convertToFahrenheit(num))
+        }
+      }
+      convertTemperature(25,'C')
+      convertTemperature(86,'F')
+    </script>
+  </body>
+</html>

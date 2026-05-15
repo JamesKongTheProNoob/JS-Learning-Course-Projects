@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      console.log(arraySwap([1,20,22,24,5]));
+      console.log(arraySwap(['hi','hello','good']));
+      function arraySwap(array){
+        const temp=array[0]
+        array[0]=array[array.length-1]
+        array[array.length-1]=temp;
+        return array;
+      }
+    </script>
+  </body>
+</html>    

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <button onclick="
+      document.querySelector('div').innerHTML='<p>Added</p>'
+      clearTimeout(timeOutId)
+      timeOutId=setTimeout(function(){document.querySelector('div').innerHTML=''},1000)
+    ">Add to cart</button>
+    <div></div>
+    <script>
+      let clicked=false;
+      let timeOutId;
+    </script>
+  </body>
+</html>   

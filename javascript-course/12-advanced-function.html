@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <button onclick="
+
+    " class="js-button">Click</button>
+    <script>
+      const buttonElement = document.querySelector('.js-button');
+      buttonElement.addEventListener('click',()=>{
+        console.log('click');
+      });//has two paramaters, one is the event,
+      //this does the EXACT same thing as onclick=""
+
+      /*
+      greeting();//as greeting is essentially a var(out of javascript cope), it can be called before it is defined(Hoisting)
+      function greeting(){//this is a shortuct for var greeting = function(){code}, having advanatages of hoisting and easier to read
+        console.log('hello')
+      }
+      greeting();//calling/running the function
+      //functions are values(like numbers,strings,booleans)
+      const num = 2;
+      const function1 = function(){//this is an annonomous function, a function without a name(Hoisting doesn't work here)
+        console.log('hello2');
+      }//functions can be stored in variables like values
+      console.log(function1);//shows that this actually contains this function
+      console.log(typeof function1);
+      function1();//runs the function inside of the variable name function1
+
+      const object1={
+        num:2,
+        fun: function(){//saves a function inside this object under the property fun, or method(functions saved inside of an object)
+          console.log('hello3')
+        }
+      }
+      object1.fun()//displays hello three
+
+      function display(param){
+        console.log(param);
+      }
+      display(2);//passing an value into the function
+
+      function run(param){
+        param()//calls the function passed in and contained inside of a param
+      }
+      run(function(){
+        console.log('hellow4')//this is callback function, a function that passes into another function
+      })
+
+      //specific operations on functions below:timeout
+      setTimeout(function(){
+        console.log('timeout');
+        console.log('timeout2');//inside of this the code are synchronous: timeout will display first then timeout2 will be written
+      },3000);//builtInfunction, two parameters: function that wants to be run later and how long to wait before the function runs(the time is in miliseconds: 1000ms=1s)
+
+      console.log('next line');//this line would display first as the computer won't wait for the previous line to finish: Asynchronous code
+      //Synchronous code: will wait for one line finish before going to the next line
+
+      setInterval(function(){
+        console.log('interval')
+      },3000)//parameter 1: function we want to run in the future parameter 2: the interval of time between each call of the function(it will run the function again and again in between the intervals dictated)
+
+      console.log('next line 2')//like setTimout, setInterval is asyonchronized, so it means that this line runs before the previous setInterval(function()) finishes
+
+      //another way to loop through an array
+      ['make dinner','wash dishes','watch youtube'].forEach(function(value,index){
+        if(value==='wash dishes'){
+          return;//DOESN'T end the function like in other cases, but does acts as a continue(forEach is equivalent to a loop,so a return value doesn't end the funtion like others). HOWEVER if you need to exit a loop early, use a for loop instead of forEach!
+        }
+        console.log(index)
+        console.log(value)
+      });//loops through the array and output every value(forEach takes each value, save it in the paramater(if there is one), and run the function)
+      //this is the preferred
+      //functions inside of forEach takes two parameters, the value and its index
+      const arrowFunction=(param1,param2)=>{//mostly work the same as regular function
+        console.log('hello');
+        return 5;
+      };
+      const regularFunction=function(param, param2){
+        console.log('hello');
+        return 5
+      }
+      arrowFunction();
+      regularFunction();
+      const oneParam=param=>{//in arrowFunctions, where thes is only one parameter, the brackets are not needed
+        console.log(param+1)
+      }
+      oneParam(2);
+      const oneLine=()=>2+3; //when a function is one line, the code inside of the function can be written like this without brackets
+      console.log(oneLine());
+
+      ['make dinner','wash dishes','watch youtube'].forEach((value,index)=>{//passing a function into another function: recommends using arrow function to be easily read
+        if(value==='wash dishes'){
+          return;//DOESN'T end the function like in other cases, but does acts as a continue(forEach is equivalent to a loop,so a return value doesn't end the funtion like others). HOWEVER if you need to exit a loop early, use a for loop instead of forEach!
+        }
+        console.log(index)
+        console.log(value)
+      });
+      const object2={
+        method: function function1(){
+
+        }
+        method:()=>{
+
+        },
+        method(){//shorthand syntax: easier to read in an obj than typical arrow syntax,sames as above
+
+        }
+      }
+      */
+
+    </script>
+  </body>
+</html>    

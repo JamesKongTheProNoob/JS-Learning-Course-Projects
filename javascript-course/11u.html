@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      const foods=['egg','apple','egg','egg','ham']
+      function removeEgg(foods){
+        const result=[]
+        let count=0
+        const reversed=foods.slice().reverse()
+        for(let i=0;i<reversed.length;i++){
+          if(reversed[i]==='egg' && count < 2){
+            count+=1
+            continue
+          }
+          result.push(reversed[i])
+        }
+        return result.reverse()
+      }
+      console.log(removeEgg(foods))
+      console.log(foods)
+    </script>
+  </body>
+</html>    

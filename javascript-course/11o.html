@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      let array1=['hello','world','search','good']
+      let array2=['not','found']
+      let flag=false;
+      for(let i=0;i<array1.length;i++){
+        if(array1[i]==='search'){
+          console.log(i)
+          flag=true;
+          break
+        }
+      }
+      if(flag===false){
+        console.log(-1)
+      }
+      flag=false;
+      for(let i=0;i<array2.length;i++){
+        if(array2[i]==='search'){
+          console.log(i)
+          flag=true;
+          break
+        }
+      }
+      if(flag===false){
+        console.log(-1)
+      }
+    </script>
+  </body>
+</html>    
